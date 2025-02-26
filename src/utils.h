@@ -1,5 +1,7 @@
 #pragma once
 
+#include <emmintrin.h>
+
 #include <string>
 namespace inferllm {
 std::string format(const char* fmt, ...) __attribute__((format(printf, 1, 2)));
