@@ -10,9 +10,10 @@ option(ENABLE_TEST "Build with TEST." OFF)
 
 aux_source_directory(${PROJECT_SOURCE_DIR}/src DIR_SRC)
 aux_source_directory(${PROJECT_SOURCE_DIR}/src/core DIR_CORE)
+aux_source_directory(${PROJECT_SOURCE_DIR}/src/core/device DIR_CORE_DEVICE)
 aux_source_directory(${PROJECT_SOURCE_DIR}/src/kern DIR_KERN)
-add_library(mini_llm_inference STATIC ${DIR_SRC} ${DIR_CORE} ${DIR_KERN})
-add_library(mini_llm_inference_shared SHARED ${DIR_SRC} ${DIR_CORE} ${DIR_KERN})
+add_library(mini_llm_inference STATIC ${DIR_SRC} ${DIR_CORE} ${DIR_CORE_DEVICE} ${DIR_KERN})
+add_library(mini_llm_inference_shared SHARED ${DIR_SRC} ${DIR_CORE} ${DIR_CORE_DEVICE} ${DIR_KERN})
 
 target_include_directories(mini_llm_inference PUBLIC include ${PROJECT_SOURCE_DIR}/src)
 target_include_directories(mini_llm_inference_shared PUBLIC include ${PROJECT_SOURCE_DIR}/src)

@@ -1,12 +1,11 @@
 #pragma once
 
-#include <any>
 #include <cstddef>
 #include <cstdint>
 #include <memory>
 #include <vector>
 
-#include "core/device.h"
+#include "device/device.h"
 #include "utils.h"
 namespace inferllm {
 enum class DType {

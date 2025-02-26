@@ -1,6 +1,14 @@
 #include "tensor.h"
 
 namespace inferllm {
+Tensor::~Tensor() {
+  if (is_own() && data_ != nullptr) {
+    device_->free_device(data_.get());
+    data_ = nullptr;
+  }
+  state_ = TensorState::OutSide;
+}
+
 void Tensor::set_shape(std::vector<size_t> shape) {
   dims_ = shape.size();
   shape_ = shape;

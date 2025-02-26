@@ -1,7 +1,7 @@
 #include <cstring>
 
+#include "core/thread_pool.h"
 #include "device.h"
-#include "thread_pool.h"
 
 namespace inferllm {
 class CPUDevice : public Device {
