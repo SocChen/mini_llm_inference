@@ -1,5 +1,5 @@
 ---
-Checks:          'clang-diagnostic-*,clang-analyzer-*,cppcoreguidelines-*,google-*'
+Checks:          'clang-diagnostic-*,clang-analyzer-*,cppcoreguidelines-*,google-build-*,google-default-*,google-explicit-*,google-global-*,google-readability-*,google-runtime-*,google-upgrade-*'
 WarningsAsErrors: ''
 HeaderFileExtensions:
   - ''
