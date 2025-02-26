@@ -1,3 +1,5 @@
+#pragma once
+
 #include <cstring>
 
 #include "core/thread_pool.h"
